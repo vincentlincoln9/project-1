@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <style>
+      :root {
+        --bg-1: #0f172a;
+        --bg-2: #1e293b;
+        --card: rgba(15, 23, 42, 0.7);
+        --text: #e2e8f0;
+        --muted: #cbd5e1;
+        --accent: #7c3aed;
+        --accent-2: #22d3ee;
+        --glow: rgba(124, 58, 237, 0.45);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(34, 211, 238, 0.18), transparent 30%),
+          radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.2), transparent 35%),
+          linear-gradient(135deg, var(--bg-1), var(--bg-2));
+        color: var(--text);
+        padding: 2rem 1rem;
+      }
+
+      .topbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.1rem 6vw;
+        background: rgba(15, 23, 42, 0.5);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .brand {
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 600;
+        transition: color 0.2s ease;
+      }
+
+      .nav a:hover,
+      .nav a.active {
+        color: #ffffff;
+      }
+
+      .card {
+        position: relative;
+        width: min(90vw, 700px);
+        padding: 3rem 2.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 24px;
+        background: rgba(15, 23, 42, 0.65);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 25px 80px rgba(15, 23, 42, 0.5), 0 0 40px var(--glow);
+        overflow: hidden;
+      }
+
+      .card::before,
+      .card::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(20px);
+        opacity: 0.8;
+      }
+
+      .card::before {
+        width: 220px;
+        height: 220px;
+        background: rgba(34, 211, 238, 0.17);
+        right: -60px;
+        top: -60px;
+      }
+
+      .card::after {
+        width: 180px;
+        height: 180px;
+        background: rgba(124, 58, 237, 0.18);
+        left: -40px;
+        bottom: -60px;
+      }
+
+      .content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 0.5rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(124, 58, 237, 0.15);
+        color: #d8b4fe;
+        border: 1px solid rgba(196, 181, 253, 0.3);
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 1rem 0 0.8rem;
+        font-size: clamp(2.3rem, 5vw, 4rem);
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+        background: linear-gradient(135deg, #f8fafc, #a5f3fc 35%, #c4b5fd 70%, #f9a8d4);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .contact-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 1.2rem;
+        border-radius: 16px;
+        background: rgba(148, 163, 184, 0.05);
+        border: 1px solid rgba(148, 163, 184, 0.14);
+      }
+
+      .label {
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .value {
+        color: #fff;
+        text-align: right;
+      }
+
+      a.value {
+        color: #a5f3fc;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="topbar">
+      <div class="brand">Hello World</div>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+    </nav>
+
+    <main class="card">
+      <div class="content">
+        <span class="eyebrow">Reach Out</span>
+        <h1>Contact</h1>
+
+        <div class="contact-list">
+          <div class="contact-item">
+            <div class="label">Email</div>
+            <a class="value" href="mailto:hello@example.com">hello@example.com</a>
+          </div>
+          <div class="contact-item">
+            <div class="label">Phone</div>
+            <div class="value">+1 (555) 123-4567</div>
+          </div>
+          <div class="contact-item">
+            <div class="label">Location</div>
+            <div class="value">New York, NY</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

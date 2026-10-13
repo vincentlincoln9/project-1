@@ -31,6 +31,46 @@
           radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.2), transparent 35%),
           linear-gradient(135deg, var(--bg-1), var(--bg-2));
         color: var(--text);
+        padding: 2rem 1rem;
+      }
+
+      .topbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.1rem 6vw;
+        background: rgba(15, 23, 42, 0.5);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .brand {
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 600;
+        transition: color 0.2s ease;
+      }
+
+      .nav a:hover,
+      .nav a.active {
+        color: #ffffff;
       }
 
       .card {
@@ -124,6 +164,10 @@
         font-size: 0.98rem;
         font-weight: 600;
         cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
       }
 
@@ -145,6 +189,15 @@
     </style>
   </head>
   <body>
+    <nav class="topbar">
+      <div class="brand">Hello World</div>
+      <div class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
     <div class="card">
       <div class="content">
         <div class="badge">Welcome</div>
@@ -153,8 +206,8 @@
           Your first web page is live, sleek, and ready to impress.
         </p>
         <div class="button-row">
-          <button class="button primary">Get Started</button>
-          <button class="button secondary">Learn More</button>
+          <a class="button primary" href="about.html">About Us</a>
+          <a class="button secondary" href="contact.html">Contact</a>
         </div>
       </div>
     </div>
