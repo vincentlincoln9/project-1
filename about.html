@@ -42,7 +42,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1.1rem 6vw;
+        padding: 0.35rem 6vw;
         z-index: 10;
         background: rgba(15, 23, 42, 0.5);
         backdrop-filter: blur(10px);
@@ -57,8 +57,8 @@
 
       .brand img {
         display: block;
-        width: 112px;
-        height: 66px;
+        width: 84px;
+        height: 50px;
         object-fit: contain;
       }
 
@@ -152,6 +152,16 @@
         line-height: 1.8;
       }
 
+      .intro-tagline {
+        display: block;
+        margin: 0.35rem 0 1rem;
+        color: #67e8f9;
+        font-size: clamp(1.15rem, 2.6vw, 1.55rem);
+        font-weight: 700;
+        line-height: 1.35;
+        text-shadow: 0 0 18px rgba(34, 211, 238, 0.28);
+      }
+
       .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -178,8 +188,8 @@
       }
 
       @media (max-width: 520px) {
-        .topbar { padding: 0.55rem 4vw; }
-        .brand img { width: 82px; height: 52px; }
+        .topbar { padding: 0.25rem 4vw; }
+        .brand img { width: 70px; height: 44px; }
         .nav { gap: 0.55rem; font-size: 0.9rem; }
       }
     </style>
@@ -202,7 +212,7 @@
          
  Computer Science & IT Services
 
- Innovative Technology Solutions for Modern Businesses
+<strong class="intro-tagline">Innovative Technology Solutions for Modern Businesses</strong>
 
 I provide a range of Computer Science and Information Technology services focused on software development, web and mobile applications, artificial intelligence, database management, and digital solutions. My goal is to help individuals, startups, and businesses solve real-world problems, streamline operations, and improve productivity through reliable and user-friendly technology.
 
