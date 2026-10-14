@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="title">
+  <title id="title">VL Tech</title>
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#24d5ff"/><stop offset="1" stop-color="#0754f5"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#fff"/><stop offset="1" stop-color="#b9c3d0"/>
+    </linearGradient>
+  </defs>
+  <path d="M57 119C22 146 10 177 25 194c17 20 63 15 113-1M235 125c79-35 139-74 126-91-11-15-65-3-125 17" fill="none" stroke="url(#blue)" stroke-width="8"/>
+  <path d="M55 35h48l51 89 52-89h1v58l-74 111z" fill="url(#blue)"/>
+  <path d="M211 34h35v122l-35 30zM211 147l-35 45v13h143l-24-32h-84z" fill="url(#silver)"/>
+  <circle cx="365" cy="34" r="9" fill="#26dfff"/>
+  <g fill="url(#silver)" font-family="Arial, sans-serif" font-size="29" font-weight="300" letter-spacing="15">
+    <text x="104" y="258">TECH</text>
+  </g>
+  <path d="M38 247h56M326 247h56" stroke="url(#blue)" stroke-width="3"/>
+</svg>

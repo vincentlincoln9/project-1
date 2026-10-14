@@ -43,16 +43,23 @@
         justify-content: space-between;
         align-items: center;
         padding: 1.1rem 6vw;
+        z-index: 10;
         background: rgba(15, 23, 42, 0.5);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
 
       .brand {
-        font-size: 1.1rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        flex: 0 0 auto;
+      }
+
+      .brand img {
+        display: block;
+        width: 112px;
+        height: 66px;
+        object-fit: contain;
       }
 
       .nav {
@@ -186,11 +193,17 @@
         color: var(--text);
         border: 1px solid rgba(148, 163, 184, 0.2);
       }
+
+      @media (max-width: 520px) {
+        .topbar { padding: 0.65rem 4vw; }
+        .brand img { width: 82px; height: 52px; }
+        .nav { gap: 0.65rem; font-size: 0.9rem; }
+      }
     </style>
   </head>
   <body>
     <nav class="topbar">
-      <div class="brand">VINLINCOTECH</div>
+      <a class="brand" href="index.html" aria-label="VL Tech home"><img src="logo.svg" alt="VL Tech" /></a>
       <div class="nav">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
