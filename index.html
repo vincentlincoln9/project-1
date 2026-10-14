@@ -194,10 +194,44 @@
         border: 1px solid rgba(148, 163, 184, 0.2);
       }
 
+      .gallery-preview {
+        width: min(90vw, 900px);
+        margin-top: 1.5rem;
+        text-align: center;
+      }
+
+      .gallery-preview h2 {
+        margin: 0 0 1rem;
+        color: #a5f3fc;
+      }
+
+      .preview-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .preview-grid a {
+        display: block;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 16px;
+        background: rgba(15, 23, 42, 0.75);
+      }
+
+      .preview-grid img {
+        display: block;
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+      }
+
       @media (max-width: 520px) {
         .topbar { padding: 0.25rem 4vw; }
         .brand img { width: 70px; height: 44px; }
         .nav { gap: 0.65rem; font-size: 0.9rem; }
+        .preview-grid { grid-template-columns: 1fr; }
+        .preview-grid img { height: auto; aspect-ratio: 4 / 3; }
       }
     </style>
   </head>
@@ -233,5 +267,16 @@ Dream it. Build it. Launch it. Keep innovating.
         </div>
       </div>
     </div>
+    <section class="gallery-preview" aria-labelledby="gallery-preview-title">
+      <h2 id="gallery-preview-title">Gallery</h2>
+      <div class="preview-grid">
+        <a href="gallery.html" aria-label="Open the photo gallery">
+          <img src="gallery-1.jpeg" alt="Learners collaborating around a table with laptops" />
+        </a>
+        <a href="gallery.html" aria-label="Open the photo gallery">
+          <img src="gallery-2.jpeg" alt="Learners working together around a table" />
+        </a>
+      </div>
+    </section>
   </body>
 </html>
